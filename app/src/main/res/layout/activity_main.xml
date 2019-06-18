@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a51006705.sqliterecyclerview.MainActivity">
+
+    <EditText
+        android:id="@+id/editText_item_name"
+        android:hint="Enter name of item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+    <TextView
+        android:id="@+id/textView_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_item_name"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="0"
+        android:textSize="50sp"/>
+
+    <Button
+        android:id="@+id/button_decrease"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView_amount"
+        android:layout_alignBottom="@+id/textView_amount"
+        android:layout_toStartOf="@+id/textView_amount"
+        android:layout_marginEnd="18dp"
+        android:text="-"
+        android:textSize="30sp"
+        />
+
+    <Button
+        android:id="@+id/button_increase"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView_amount"
+        android:layout_alignBottom="@+id/textView_amount"
+        android:layout_toEndOf="@+id/textView_amount"
+        android:text="+"
+        android:textSize="30sp"
+        android:layout_marginStart="18dp"
+        />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Add"
+        android:layout_alignBottom="@+id/textView_amount"
+        android:layout_alignTop="@+id/textView_amount"
+        android:layout_toEndOf="@+id/button_increase"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView_amount"/>
+
+</RelativeLayout>
